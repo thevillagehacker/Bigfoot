@@ -31,13 +31,13 @@ fi
 #heroku service error page check
 domcheck()
 {
-	http -b GET http://$tar | grep -F -q "//www.herokucdn.com/error-pages/no-such-app.html" && echo -e "\e[0;32m[+] Subdomain takeover may be possible\033[0;37m" || echo -e "\e[0;31m[-] Subdomain takeover is not possible\033[0;37m"
+	http -b GET http://$tar 2> /dev/null | grep -F -q "//www.herokucdn.com/error-pages/no-such-app.html" && echo -e "\e[0;32m[+] Subdomain takeover may be possible\033[0;37m" || echo -e "\e[0;31m[-] Subdomain takeover is not possible\033[0;37m"
 
 }
 
 bulkcheck()
 {
-	for i in `cat $tar`; do echo $i; http -b GET http://$i | grep -F -q "//www.herokucdn.com/error-pages/no-such-app.html" && echo -e "\e[0;32m[+] Subdomain takeover may be possible\033[0;37m" || echo -e "\e[0;31m[-] Subdomain takeover is not possible\033[0;37m"; done
+	for i in `cat $tar`; do echo $i; http -b GET http://$i 2> /dev/null | grep -F -q "//www.herokucdn.com/error-pages/no-such-app.html" && echo -e "\e[0;32m[+] Subdomain takeover may be possible\033[0;37m" || echo -e "\e[0;31m[-] Subdomain takeover is not possible\033[0;37m"; done
 }
 
 #input check
