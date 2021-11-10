@@ -4,7 +4,7 @@
 version=1.0
 
 # banner
-echo """                                 
+echo -e """\e[0;32m                                 
  ______  __          ___                __   
 |   __ \|__|.-----..'  _|.-----..-----.|  |_ 
 |   __ <|  ||  _  ||   _||  _  ||  _  ||   _|
@@ -18,7 +18,7 @@ echo """
     https://github.com/thevillagehacker
     
       Hey don't miss this version $version
-    """
+\033[0;37m"""
 
 #check dependency
 if ! [ -x "$(command -v http)" ]; then
