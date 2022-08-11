@@ -1,3 +1,4 @@
+![img](https://github.com/thevillagehacker/thevillagehacker/blob/master/Do%20Hacks%20to%20Secure.png)
 # Bigfoot
 Bigfoot is made for checking the subdomains which are vulnerable to takeover.
 ## Note:-
