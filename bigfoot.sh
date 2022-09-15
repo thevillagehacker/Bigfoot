@@ -64,6 +64,6 @@ elif [ "$1" = "-f" ]; then
     bulkcheck	
 else
 	echo -e "\e[5m\e[41m\033[1;97m No Inputs supplied \033[0;37m"
-	echo -e "usage: ./heroku-sub.sh -d <example.com>"
-	echo -e "       ./heroku-sub.sh -f <targets.txt>"
+	echo -e "\e[1;97musage: ./bigfoot.sh -d <example.com>"
+	echo -e "       ./bigfoot.sh -f <targets.txt>"
 fi
